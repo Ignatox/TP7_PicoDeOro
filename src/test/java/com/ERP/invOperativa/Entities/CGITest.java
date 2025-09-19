@@ -37,4 +37,25 @@ public class CGITest {
         assertEquals(esperado, resultado, 0.0001); // delta para flotantes
     }
 
+    //prueba de regrecion apartir de modificacion de la prueba unitaria 2
+    
+    @Test
+    void testCalcularCGI_regresion() {
+        // Datos de entrada históricos (no deben cambiar)
+        double costoCompra = 50.0;
+        double costoMantenimiento = 5.0;
+        double costoPedido = 100.0;
+        int cantidadPedido = 200;
+        //cambie este valor para que falle la prueba
+        int demandaAnual = 1000000;
+
+        // Valor esperado calculado y validado previamente
+        double esperado = 51000.0;
+
+        double resultado = CGI.calcularCGI(costoCompra, costoMantenimiento, costoPedido, cantidadPedido, demandaAnual);
+
+        // como el valor de resultado cambio , porque la lógica fue modificada por lo tanto la prueba falla
+        // y se alerta de una posible regresion
+        assertEquals(esperado, resultado, 0.0001, "El cálculo de CGI ha cambiado. Posible regresión.");
+    }
 }
