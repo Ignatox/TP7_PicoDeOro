@@ -21,8 +21,9 @@ public class ArticuloProveedor extends Base{
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date fechaVigencia;
 
+    @Builder.Default
     @Column(name = "CostoAlmacenamiento")
-    private Double CostoAlmacenamiento;
+    private Double CostoAlmacenamiento=0.0;
 
     @Column(name = "Tiempo_Demora")
     private int tiempoDemora;
