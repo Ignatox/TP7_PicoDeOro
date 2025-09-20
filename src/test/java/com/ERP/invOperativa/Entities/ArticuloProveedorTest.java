@@ -64,8 +64,7 @@ public class ArticuloProveedorTest {
         assertEquals(1L, apRecuperado.getArticulo().getId());
         assertEquals(2L, apRecuperado.getProveedor().getId());
     }
-    //validar que el precio no se pierda ni cambie a 0
-    //000
+    //validar que el precio no se pierda ni camb
     @Test
     public void testPrecioArticuloProveedorNoSePierdeAlGuardar() {
         // Crear un ArticuloProveedor con precio inicial
@@ -77,7 +76,7 @@ public class ArticuloProveedorTest {
         List<ArticuloProveedor> dbSimulada = new ArrayList<>();
         dbSimulada.add(ap);
 
-        // Recuperar de la lista
+        // Recuperar de la lista simulada anteriormente
         ArticuloProveedor apRecuperado = dbSimulada.stream()
                 .filter(e -> e.getId() == 200L)
                 .findFirst()
