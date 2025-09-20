@@ -9,9 +9,9 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ "testsUnitarios" ]
+    branches: [ "testsUnitarios", "hostfix-sim" ]
   pull_request:
-    branches: [ "testsUnitarios" ]
+    branches: [ "testsUnitarios", "hostfix-sim" ]
 
 jobs:
   build:
