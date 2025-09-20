@@ -65,6 +65,7 @@ public class ArticuloProveedorTest {
         assertEquals(2L, apRecuperado.getProveedor().getId());
     }
     //validar que el precio no se pierda ni cambie a 0
+    //000
     @Test
     public void testPrecioArticuloProveedorNoSePierdeAlGuardar() {
         // Crear un ArticuloProveedor con precio inicial
