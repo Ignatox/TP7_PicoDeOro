@@ -26,6 +26,7 @@ public class ArticuloProveedorTest {
         ap.setId(100L); // si tiene ID
 
         // Verificar que se guardaron correctamente
+        //...
         assertEquals(100L, ap.getId());
         assertEquals(1L, ap.getArticulo().getId());
         assertEquals(2L, ap.getProveedor().getId());
